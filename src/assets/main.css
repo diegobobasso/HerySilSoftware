@@ -20,13 +20,13 @@ section {
   padding: 0 2rem;
 }
 
-/* Efecto vidrio para header */
+/* Efecto vidrio para header 
 .hero {
   background:
     linear-gradient(rgba(58, 12, 163, 0.9), rgba(67, 97, 238, 0.9)),
     url('@/assets/images/hero-bg.jpg') center/cover;
   backdrop-filter: blur(5px);
-}
+} */
 
 /* Cards modernas */
 .card {
