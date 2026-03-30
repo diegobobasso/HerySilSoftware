@@ -1,6 +1,8 @@
 <template>
   <div class="contact-method" :class="type">
-    <div class="method-icon">{{ icon }}</div>
+    <div class="method-icon">
+      <img :src="getIconPath(icon)" :alt="type + ' icon'" class="icon-img" />
+    </div>
     <div class="method-content">
       <h3>{{ type === 'email' ? 'Email' : 'WhatsApp' }}</h3>
       <a
@@ -26,7 +28,7 @@ const props = defineProps({
     validator: (value) => ['email', 'whatsapp'].includes(value),
   },
   icon: {
-    type: String,
+    type: String, // Nombre del archivo sin extensión (ej: "email-icon")
     required: true,
   },
   value: {
@@ -51,6 +53,11 @@ const cleanWhatsappNumber = computed(() => {
   // Elimina caracteres no numéricos excepto el +
   return props.value.replace(/[^\d+]/g, '')
 })
+
+// Método para construir la ruta del icono
+const getIconPath = (iconName) => {
+  return new URL(`../assets/icons/${iconName}.png`, import.meta.url).href
+}
 </script>
 
 <style scoped>
@@ -70,9 +77,14 @@ const cleanWhatsappNumber = computed(() => {
 }
 
 .method-icon {
-  font-size: 2rem;
   flex-shrink: 0;
   margin-top: 0.25rem;
+}
+
+.icon-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .method-content {

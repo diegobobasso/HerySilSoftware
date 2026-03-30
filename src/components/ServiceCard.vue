@@ -1,6 +1,8 @@
 <template>
   <div class="service-card">
-    <div class="service-icon">{{ icon }}</div>
+    <div class="service-icon">
+      <img :src="getIconPath(icon)" :alt="title + ' icon'" class="icon-img" />
+    </div>
     <h3>{{ title }}</h3>
     <ul>
       <li v-for="(item, index) in items" :key="index">
@@ -13,7 +15,7 @@
 <script setup>
 defineProps({
   icon: {
-    type: String,
+    type: String, // Nombre del archivo sin extensión (ej: "web-dev")
     required: true,
   },
   title: {
@@ -26,6 +28,11 @@ defineProps({
     validator: (value) => value.every((item) => typeof item === 'string'),
   },
 })
+
+// Método para construir la ruta del icono
+const getIconPath = (iconName) => {
+  return new URL(`../assets/icons/${iconName}.png`, import.meta.url).href
+}
 </script>
 
 <style scoped>
@@ -45,9 +52,15 @@ defineProps({
 }
 
 .service-icon {
-  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: var(--primary);
+  display: flex;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 h3 {

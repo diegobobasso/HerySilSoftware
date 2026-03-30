@@ -1,6 +1,8 @@
 <template>
   <div class="value-card" @mouseenter="hover = true" @mouseleave="hover = false">
-    <div class="icon" :class="{ 'animate-bounce': hover }">{{ icon }}</div>
+    <div class="icon" :class="{ 'animate-bounce': hover }">
+      <img :src="getIconPath(icon)" :alt="title + ' icon'" class="icon-img" />
+    </div>
     <h3>{{ title }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -11,7 +13,7 @@ import { ref } from 'vue'
 
 defineProps({
   icon: {
-    type: String,
+    type: String, // Nombre del archivo sin extensión (ej: "innovation-icon")
     required: true,
   },
   title: {
@@ -25,6 +27,11 @@ defineProps({
 })
 
 const hover = ref(false)
+
+// Método para construir la ruta del icono
+const getIconPath = (iconName) => {
+  return new URL(`../assets/icons/${iconName}.png`, import.meta.url).href
+}
 </script>
 
 <style scoped>
@@ -44,9 +51,14 @@ const hover = ref(false)
 }
 
 .icon {
-  font-size: 2.5rem;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
+}
+
+.icon-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .animate-bounce {

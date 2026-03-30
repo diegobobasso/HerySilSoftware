@@ -100,22 +100,22 @@ import ContactMethod from '@/components/ContactMethod.vue'
 // Datos reactivos
 const values = ref([
   {
-    icon: '💡',
+    icon: 'idea',
     title: 'Innovación',
     description: 'Implementamos las últimas tecnologías y metodologías',
   },
   {
-    icon: '🎯',
+    icon: 'coding_development',
     title: 'Enfoque',
     description: 'Soluciones específicas para tus necesidades',
   },
   {
-    icon: '⚡',
+    icon: 'calendar',
     title: 'Eficiencia',
     description: 'Desarrollo ágil y entrega oportuna',
   },
   {
-    icon: '🤝',
+    icon: 'compromiso',
     title: 'Compromiso',
     description: 'Acompañamiento continuo y soporte post-entrega',
   },
@@ -123,7 +123,7 @@ const values = ref([
 
 const services = ref([
   {
-    icon: '🌐',
+    icon: 'web_icon',
     title: 'Desarrollo Web',
     items: [
       'Aplicaciones web personalizadas',
@@ -133,7 +133,7 @@ const services = ref([
     ],
   },
   {
-    icon: '🔧',
+    icon: 'softwareupgrade',
     title: 'Soluciones Empresariales',
     items: [
       'Sistemas de gestión interna',
@@ -143,7 +143,7 @@ const services = ref([
     ],
   },
   {
-    icon: '🛠️',
+    icon: 'technicalsupport',
     title: 'Mantenimiento & Soporte',
     items: [
       'Mantenimiento preventivo y correctivo',
@@ -157,13 +157,13 @@ const services = ref([
 const contactMethods = ref([
   {
     type: 'email',
-    icon: '📧',
+    icon: 'email',
     value: 'herysilsoftwaredevelopment@gmail.com',
     description: 'Respondemos en menos de 24 horas',
   },
   {
     type: 'whatsapp',
-    icon: '💬',
+    icon: 'whatsapp',
     value: '+54 351 2458186',
     description: 'Chat directo con nuestro equipo',
   },
