@@ -1,6 +1,22 @@
 <template>
   <router-view />
 </template>
+<script setup>
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'HerySil Software Development',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Desarrollo de soluciones tecnológicas innovadoras. Transformamos ideas en realidad digital con código limpio y diseño moderno.',
+    },
+    { name: 'author', content: 'HerySil Software Development' },
+  ],
+  link: [{ rel: 'canonical', href: 'https://www.herysilsoftware.com.ar/' }],
+})
+</script>
 
 <style>
 /* Estilos globales */

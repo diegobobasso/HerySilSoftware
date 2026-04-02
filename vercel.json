@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.herysilsoftware.com.ar/$1",
+      "permanent": true
+    }
+  ]
+}

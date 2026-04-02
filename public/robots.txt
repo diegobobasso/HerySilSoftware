@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquea rutas internas que no deben indexarse
+Disallow: /login
+Disallow: /admin
+Disallow: /dashboard
+
+# Indica la ubicación del sitemap
+Sitemap: https://www.herysilsoftware.com.ar/sitemap.xml
