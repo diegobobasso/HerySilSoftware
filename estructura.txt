@@ -1,0 +1,58 @@
+.
+|-- README.md
+|-- dist
+|   |-- assets
+|   |   |-- HomeView-BXqEyxwD.css
+|   |   |-- HomeView-x2qNa6oG.js
+|   |   |-- calendar-C7jz2DwJ.png
+|   |   |-- coding_development-BO9rLWjc.png
+|   |   |-- compromiso-BvxFBqXP.png
+|   |   |-- developer-C4K2R_hS.png
+|   |   |-- developer_folder-B3F0aNwC.png
+|   |   |-- eficiencia-CMLMEYDN.png
+|   |   |-- email-jlYeZ0wi.png
+|   |   |-- enfoque-Djof2m0x.png
+|   |   |-- idea-CTbCOKrf.png
+|   |   |-- index-DeTtanPN.js
+|   |   |-- index-DwhttHbh.css
+|   |   |-- logoHerysil1-DbzVOvwS.png
+|   |   |-- mundo-D_yxp-xf.png
+|   |   |-- software-BxCZW6lT.png
+|   |   |-- softwareupgrade-Bz7X6-Mt.png
+|   |   |-- technicalsupport-6QU2Rx2R.png
+|   |   |-- web_icon-DTACZPgo.png
+|   |   `-- whatsapp-DiVmf-6y.png
+|   |-- faviconhs.png
+|   |-- index.html
+|   |-- robots.txt
+|   `-- sitemap.xml
+|-- eslint.config.js
+|-- estructura.txt
+|-- index.html
+|-- jsconfig.json
+|-- package-lock.json
+|-- package.json
+|-- public
+|   |-- faviconhs.png
+|   |-- robots.txt
+|   `-- sitemap.xml
+|-- src
+|   |-- App.vue
+|   |-- assets
+|   |   |-- base.css
+|   |   |-- icons
+|   |   |-- images
+|   |   `-- main.css
+|   |-- components
+|   |   |-- ContactMethod.vue
+|   |   |-- ServiceCard.vue
+|   |   `-- ValueCard.vue
+|   |-- main.js
+|   |-- router
+|   |   `-- index.js
+|   `-- views
+|       `-- HomeView.vue
+|-- vercel.json
+`-- vite.config.js
+
+10 directories, 45 files

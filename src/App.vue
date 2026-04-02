@@ -1,3 +1,7 @@
+<template>
+  <router-view />
+</template>
+
 <script setup>
 import { useHead } from '@vueuse/head'
 
