@@ -1,17 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
+  server: {
+    headers: {
+      'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
     },
   },
+  // Opcional: Redirección en el build (para SSR o pre-render)
   build: {
-    outDir: 'dist',
-    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
 })
