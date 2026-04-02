@@ -1,15 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "herysilsoftware.com.ar"
-        }
-      ],
+      "source": "http://herysilsoftware.com.ar/(.*)",
       "destination": "https://www.herysilsoftware.com.ar/$1",
-      "statusCode": 301,
+      "permanent": true
+    },
+    {
+      "source": "https://herysilsoftware.com.ar/(.*)",
+      "destination": "https://www.herysilsoftware.com.ar/$1",
       "permanent": true
     }
   ]
